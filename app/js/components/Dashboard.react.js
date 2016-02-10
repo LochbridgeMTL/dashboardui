@@ -23,11 +23,11 @@ var Dashboard = React.createClass({
 
             <div className="row">
               <PieChartWidget resource="data/piechartdata2.json" width="six" title="Pie chart widget" />
-              <Widget width="six" icon="fa fa-font" title="Widget 08" />
+              <Widget resource="data/widgetdata.json" width="six" icon="fa fa-font" title="Widget 08" />
             </div>
 
             <div className="row">
-              <Widget width="six" icon="fa fa-font" title="Widget 08" />
+              <Widget resource="data/widgetdata2.json" width="six" icon="fa fa-font" title="Widget 08" />
               <PieChartWidget resource="data/piechartdata.json" width="six" title="Pie chart widget" />
             </div>
 
