@@ -4,8 +4,9 @@
   top: 0px;
   width: 100%;
   z-index: 1000;
-  background-color: #f8f3ed;
-  border-bottom: solid #999999 1px;
+  background-color: #13647f;
+  border-bottom: solid #000000 1px;
+  color: #DDDDDD;
 }
 
 #main-bg {
@@ -32,11 +33,12 @@
 
 #footer {
   text-align: center;
-  background-color: #f8f3ed;
+  background-color: #13647f;
   position: fixed;
   bottom: 0;
   width: 100%;
-  border-top: solid #999999 1px;
+  border-top: solid #000000 1px;
+  color: #DDDDDD;
 }
 
 .widget {
@@ -55,6 +57,7 @@
 
 .widget-body {
   padding: 12px;
+  text-align: justify;
 }
 
 .number-widget .widget-body {
