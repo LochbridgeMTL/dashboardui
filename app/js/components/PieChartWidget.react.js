@@ -6,11 +6,12 @@ var Chart = require('chart.js');
 var $ = require('jquery');
 var uuid = require('uuid');
 
-var LineChartWidget = React.createClass({
+var PieChartWidget = React.createClass({
 
   getInitialState: function() {
     this.canvasId = uuid.v4();
     this.containerId = uuid.v4();
+    this.notes = [];
     this.data = null;
     window.addEventListener('resize', this.resizeCanvas, false);
     return null;
@@ -19,7 +20,7 @@ var LineChartWidget = React.createClass({
   drawLineChart: function() {
     var _this = this;
     $.ajax({
-      url: 'data/linechartdata.json',
+      url: _this.props.resource,
       type: 'GET',
       dataType: 'json',
     }).complete(function(data) {
@@ -29,9 +30,14 @@ var LineChartWidget = React.createClass({
 
         _this.data = parsedData;
         var ctx = document.getElementById(_this.canvasId).getContext("2d");
-        var myLineChart = new Chart(ctx).Line(_this.data, {
+        var myPieChart = new Chart(ctx).Pie(_this.data, {
           showTooltips: false
         });
+        _this.notes = [];
+        for(var i in _this.data) {
+          _this.notes.push(<li key={uuid.v4()}><i className="fa fa-stop" style={{"color":_this.data[i].color}}>&nbsp;</i>{_this.data[i].label}&nbsp;({_this.data[i].value})</li>);
+        }
+        _this.setState({redraw: true});
 
       }
 
@@ -64,12 +70,15 @@ var LineChartWidget = React.createClass({
   },
 
   render: function() {
-    var width = this.props.width + " columns widget line-chart-widget";
+    var width = this.props.width + " columns widget pie-chart-widget";
     return (
       <div className={width} id={this.containerId}>
-        <WidgetTitle icon="fa fa-line-chart" value={this.props.title} />
+        <WidgetTitle icon="fa fa-pie-chart" value={this.props.title} />
         <div className="widget-body">
           <canvas id={this.canvasId}></canvas>
+        </div>
+        <div>
+          <ul>{this.notes}</ul>
         </div>
       </div>
     )
@@ -77,4 +86,4 @@ var LineChartWidget = React.createClass({
 
 });
 
-module.exports = LineChartWidget;
+module.exports = PieChartWidget;
