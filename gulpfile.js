@@ -9,6 +9,7 @@ gulp.task('clean', shell.task([
 );
 
 gulp.task('copy', shell.task([
+    'mkdir -p dist',
     'cp -rfv app/index.html app/css app/fonts app/images app/data dist'
   ])
 );
