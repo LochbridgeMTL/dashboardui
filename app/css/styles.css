@@ -81,8 +81,10 @@
   list-style: none;
   margin: 0px;
   padding: 0px;
-  margin-left: 12px;
-  margin-bottom: 6px;
+}
+
+.pie-chart-widget div div {
+  text-align: left;
 }
 
 .pie-chart-widget div ul li {

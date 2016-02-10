@@ -76,9 +76,9 @@ var PieChartWidget = React.createClass({
         <WidgetTitle icon="fa fa-pie-chart" value={this.props.title} />
         <div className="widget-body">
           <canvas id={this.canvasId}></canvas>
-        </div>
-        <div>
-          <ul>{this.notes}</ul>
+          <div>
+            <ul>{this.notes}</ul>
+          </div>
         </div>
       </div>
     )

@@ -30,7 +30,8 @@ var LineChartWidget = React.createClass({
         _this.data = parsedData;
         var ctx = document.getElementById(_this.canvasId).getContext("2d");
         var myLineChart = new Chart(ctx).Line(_this.data, {
-          showTooltips: false
+          showTooltips: false,
+          bezierCurve: false
         });
 
       }

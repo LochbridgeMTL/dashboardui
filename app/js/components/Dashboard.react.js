@@ -17,13 +17,13 @@ var Dashboard = React.createClass({
           <div className="container">
 
             <div className="row">
-              <NumberWidget width="six" title="Number Widget 01" resource="data/numberdata.json" />
-              <LineChartWidget width="six" title="Line chart widget" />
+              <LineChartWidget width="twelve" title="Line chart widget" />
             </div>
 
             <div className="row">
-              <PieChartWidget resource="data/piechartdata2.json" width="six" title="Pie chart widget" />
-              <Widget resource="data/widgetdata.json" width="six" icon="fa fa-font" title="Widget 08" />
+              <PieChartWidget resource="data/piechartdata2.json" width="four" title="Pie chart widget" />
+              <Widget resource="data/widgetdata.json" width="four" icon="fa fa-font" title="Widget 08" />
+              <NumberWidget width="four" title="Number Widget 01" resource="data/numberdata.json" />
             </div>
 
             <div className="row">
