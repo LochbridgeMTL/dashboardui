@@ -12,7 +12,8 @@ var mimeTypes = {
 	"png" : "image/png",
 	"js" : "text/javascript",
 	"css" : "text/css",
-	"woff2" : "application/font-woff2"
+	"woff2" : "application/font-woff2",
+	"json": "application/json"
 };
 
 // Create Server
@@ -29,6 +30,7 @@ http.createServer(function(req, res) {
 
 		res.writeHead(404, {'Content-type': 'text/plain'});
 		res.write('404 Not Found\n');
+		res.write(req.url);
 		res.end();
 		return;
 

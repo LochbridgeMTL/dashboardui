@@ -18,12 +18,14 @@
     "babel-preset-react": "^6.3.13",
     "babelify": "^7.2.0",
     "browserify": "^12.0.1",
+    "chart.js": "^1.0.2",
     "dateformat": "^1.0.12",
     "gulp": "^3.9.0",
     "gulp-livereload": "^3.8.1",
     "gulp-shell": "^0.5.1",
     "jquery": "^2.2.0",
     "react": "^0.14.6",
-    "react-dom": "^0.14.6"
+    "react-dom": "^0.14.6",
+    "uuid": "^2.0.1"
   }
 }

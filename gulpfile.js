@@ -9,7 +9,7 @@ gulp.task('clean', shell.task([
 );
 
 gulp.task('copy', shell.task([
-    'cp -rfv app/index.html app/css app/fonts app/images dist'
+    'cp -rfv app/index.html app/css app/fonts app/images app/data dist'
   ])
 );
 
@@ -39,6 +39,7 @@ gulp.task('watch', function() {
   // watch static files
   gulp.watch('app/index.html', ['copy']);
   gulp.watch('app/css/**.css', ['copy']);
+  gulp.watch('app/data/**.json', ['copy']);
 
   // Watch any files in dist/, reload on change
   gulp.watch(['dist/index.html', 'dist/js/bundle.js']).on('change', livereload.changed);
