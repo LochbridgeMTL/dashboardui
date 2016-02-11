@@ -7,7 +7,7 @@ var $ = require('jquery');
 var NumberWidget = React.createClass({
 
   getInitialState: function() {
-    return {value: 0, label:""};
+    return {value: 0, label:"", title: ""};
   },
 
   drawNumber: function() {
@@ -19,7 +19,7 @@ var NumberWidget = React.createClass({
       dataType: 'json',
     }).complete(function(data) {
       var parsedData = JSON.parse(data.responseText);
-      _this.setState({value: parsedData.value, label: parsedData.label});
+      _this.setState({value: parsedData.value, label: parsedData.label, title: parsedData.title});
     });
 
   },
@@ -39,7 +39,7 @@ var NumberWidget = React.createClass({
 
     return (
       <div className={width}>
-        <WidgetTitle icon="fa fa-hashtag" value={this.props.title} />
+        <WidgetTitle icon="fa fa-hashtag" value={this.state.title} />
         <div className="widget-body">
           <h3>{this.state.value}</h3>
           <div><span>{this.state.label}</span></div>

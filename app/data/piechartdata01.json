@@ -1,0 +1,32 @@
+[
+    {
+        "value": 40,
+        "color":"#af7ac4",
+        "highlight": "#af7ac4",
+        "label": "Netbanking"
+    },
+    {
+        "value": 30,
+        "color": "#27ae60",
+        "highlight": "#27ae60",
+        "label": "Credit card"
+    },
+    {
+        "value": 15,
+        "color": "#e67e22",
+        "highlight": "#e67e22",
+        "label": "Debit cards"
+    },
+    {
+      	"value": 10,
+      	"color": "#1abc9c",
+      	"highlight":"#1abc9c",
+      	"label":"Cash"
+    },
+    {
+      	"value": 5,
+      	"color": "#c0392b",
+      	"highlight":"#c0392b",
+      	"label":"Other"
+    }
+]

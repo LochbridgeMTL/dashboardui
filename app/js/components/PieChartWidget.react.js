@@ -12,6 +12,7 @@ var PieChartWidget = React.createClass({
     this.canvasId = uuid.v4();
     this.containerId = uuid.v4();
     this.notes = [];
+    this.title = "Title to be set by service";
     this.data = null;
     window.addEventListener('resize', this.resizeCanvas, false);
     return null;
@@ -55,8 +56,8 @@ var PieChartWidget = React.createClass({
 
   setCanvasSize: function() {
     var width = $("#" + this.containerId).width() - 24;
-    var height = ((width * 9) / 16);
-    $("#" + this.canvasId).width(width);
+    var height = ((width * 9) / 18);
+    $("#" + this.canvasId).width(width * 0.50);
     $("#" + this.canvasId).height(height);
   },
 
@@ -73,13 +74,31 @@ var PieChartWidget = React.createClass({
     var width = this.props.width + " columns widget pie-chart-widget";
     return (
       <div className={width} id={this.containerId}>
-        <WidgetTitle icon="fa fa-pie-chart" value={this.props.title} />
-        <div className="widget-body">
-          <canvas id={this.canvasId}></canvas>
-          <div>
-            <ul>{this.notes}</ul>
+
+        <div className="row">
+
+          <div className="twelve columns">
+            <WidgetTitle icon="fa fa-pie-chart" value={this.title} />
           </div>
+
         </div>
+
+        <div className="row">
+
+          <div className="six columns">
+            <div className="widget-body">
+              <canvas id={this.canvasId}></canvas>
+            </div>
+          </div>
+
+          <div className="six columns" style={{"paddingTop":"12px"}}>
+            <div>
+              <ul>{this.notes}</ul>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     )
   }
