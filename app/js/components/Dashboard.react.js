@@ -22,9 +22,9 @@ var Dashboard = React.createClass({
             </div>
 
             <div className="row">
-              <NumberWidget width="four" resource="data/numberdata01.json" />
+              <NumberWidget width="five" resource="data/numberdata01.json" />
               <NumberWidget width="four" resource="data/numberdata02.json" />
-              <NumberWidget width="four" resource="data/numberdata03.json" />
+              <NumberWidget width="three" resource="data/numberdata03.json" />
             </div>
 
             <div className="row">

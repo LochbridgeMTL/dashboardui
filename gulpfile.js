@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var sass = require('gulp-sass');
 var browserify = require('browserify');
 var shell = require('gulp-shell');
 var livereload = require('gulp-livereload')
@@ -19,6 +20,12 @@ gulp.task('make-js-dir', shell.task([
   ])
 );
 
+gulp.task('styles', function() {
+    gulp.src('app/sass/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./app/css/'));
+});
+
 gulp.task('react', shell.task([
     'browserify -t [ babelify --presets [ react ] ] app/js/app.js -o dist/js/bundle.js'
   ])
@@ -32,6 +39,9 @@ gulp.task('watch', function() {
 
   // Create LiveReload server
   livereload.listen();
+
+  // Watch sass files and compile
+  gulp.watch('app/sass/**/*.scss', ['styles']);
 
   // Watch jsx file(s) and relaunch browserify
   gulp.watch('app/js/app.js', ['react']);
