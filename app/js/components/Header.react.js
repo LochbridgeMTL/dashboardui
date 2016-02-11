@@ -10,7 +10,7 @@ var Header = React.createClass({
         <div className="container">
           <div className="row">
             <div className="twelve columns" style={{"fontSize": "2em"}}>
-              <span><i className="fa fa-newspaper-o"></i>&nbsp;Dashboard</span>
+              <img src="images/header.png" />
             </div>
           </div>
         </div>
