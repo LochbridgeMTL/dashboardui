@@ -51,8 +51,8 @@ var ProgressWidget = React.createClass({
 
       <div className="widget-body">
 
-          <div style={{"border":"solid #333333 1px", "width":"100%"}}>
-            <div style={{"backgroundColor":"#1d9e74", "width":pct + "%", "fontSize":"0.5em"}}>&nbsp;</div>
+          <div className="progress-bar-container">
+            <div className="progress-bar-content" style={{"width":pct + "%"}}>&nbsp;</div>
           </div>
           <div><span>{this.data.current} out of {this.data.target}</span></div>
 
