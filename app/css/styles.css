@@ -12,16 +12,19 @@
 #main-bg {
   position: absolute;
   top: 81px;
-  bottom: 24px;
+  bottom: 71px;
   left: 0px;
   right: 0px;
   overflow-y: scroll;
-  background-color: #F5F5F5; }
+  background-color: #F5F5F5;
+  background-image: url("../images/card.png");
+  background-repeat: no-repeat;
+  opacity: 0.25; }
 
 #main-layout {
   position: absolute;
   top: 81px;
-  bottom: 24px;
+  bottom: 71px;
   left: 0px;
   right: 0px;
   overflow-y: scroll;
@@ -35,7 +38,11 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  border-top: solid #999999 1px; }
+  height: 71px;
+  border-top: solid #999999 1px;
+  background-image: url("../images/footer.png");
+  background-repeat: no-repeat;
+  background-position: center; }
 
 .widget {
   border: solid #999999 1px;

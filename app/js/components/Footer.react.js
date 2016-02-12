@@ -5,7 +5,7 @@ var React = require('react');
 var Footer = React.createClass({
 
   render: function() {
-    return <div id="footer">&copy; Lochbridge</div>
+    return <div id="footer">&nbsp;</div>
   }
 
 });
