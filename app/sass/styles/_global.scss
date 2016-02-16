@@ -1,3 +1,7 @@
+body {
+  background-color: $pale;
+}
+
 #header {
   position: fixed;
   height: 80px;
@@ -47,6 +51,55 @@
 	background-image: url('../images/footer.png');
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+#menu-container {
+  color: $white;
+  width: 240px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  background-color: $dark-color;
+  box-shadow: 1px 0px 10px 2px $shadow-color;
+}
+
+#main-content {
+  position: absolute;
+  left: 240px;
+  width: 100%;
+}
+
+#nav-logo {
+  height: 120px;
+  text-align: center;
+  border-bottom: solid $medium-color 1px;
+}
+
+.menu-item, .contextual-items {
+  font-family: Montserrat;
+  font-weight: normal;
+  border-bottom: solid $medium-color 1px;
+  text-align: right;
+  padding-right: 18px;
+}
+
+.menu-item:hover, .menu-item-active {
+  background-color: $medium-color;
+}
+
+.contextual-items {
+  background-color: $medium-color;
+  box-shadow: 1px 0px 10px 2px $shadow-color;
+  -webkit-box-shadow: inset 0px 2px 14px 0px rgba(102,102,102,1);
+  -moz-box-shadow: inset 0px 2px 14px 0px rgba(102,102,102,1);
+  box-shadow: inset 0px 2px 14px 0px $shadow-color;
+  border: none;
+}
+
+.contextual-items div a {
+  color: $white;
+  font-size: 0.8em;
+  text-decoration: none;
 }
 
 .widget {

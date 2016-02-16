@@ -1,9 +1,8 @@
 'use strict'
 
 var React = require('react');
-var Header = require('./Header.react');
-var Footer = require('./Footer.react');
-var Dashboard = require('./Dashboard.react');
+var MenuItem = require('./MenuItem.react');
+var MerchantID = require('./MerchantID.react');
 
 var Application = React.createClass({
 
@@ -14,9 +13,15 @@ var Application = React.createClass({
   render: function() {
     return(
       <div>
-        <Header />
-        <Dashboard />
-        <Footer />
+        <div id="menu-container" className="u-pull-left">
+          <MerchantID />
+          <MenuItem label="Summary" />
+          <MenuItem label="Credit sales" />
+          <MenuItem label="Customer insight" />
+        </div>
+        <div className="u-pull-left" id="main-content">
+          content
+        </div>
       </div>
     )
   }

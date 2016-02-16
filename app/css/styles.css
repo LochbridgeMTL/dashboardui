@@ -1,3 +1,6 @@
+body {
+  background-color: #DDDFD4; }
+
 #header {
   position: fixed;
   height: 80px;
@@ -7,7 +10,7 @@
   background-color: #FFFFFF;
   border-bottom: solid #999999 1px;
   color: #1E5A8A;
-  box-shadow: 0px 1px 10px 2px #BBBBBB; }
+  box-shadow: 0px 1px 10px 2px #666666; }
 
 #main-bg {
   position: absolute;
@@ -43,6 +46,48 @@
   background-image: url("../images/footer.png");
   background-repeat: no-repeat;
   background-position: center; }
+
+#menu-container {
+  color: #FFFFFF;
+  width: 240px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  background-color: #173E43;
+  box-shadow: 1px 0px 10px 2px #666666; }
+
+#main-content {
+  position: absolute;
+  left: 240px;
+  width: 100%; }
+
+#nav-logo {
+  height: 120px;
+  text-align: center;
+  border-bottom: solid #3FB0AC 1px; }
+
+.menu-item, .contextual-items {
+  font-family: Montserrat;
+  font-weight: normal;
+  border-bottom: solid #3FB0AC 1px;
+  text-align: right;
+  padding-right: 18px; }
+
+.menu-item:hover, .menu-item-active {
+  background-color: #3FB0AC; }
+
+.contextual-items {
+  background-color: #3FB0AC;
+  box-shadow: 1px 0px 10px 2px #666666;
+  -webkit-box-shadow: inset 0px 2px 14px 0px #666666;
+  -moz-box-shadow: inset 0px 2px 14px 0px #666666;
+  box-shadow: inset 0px 2px 14px 0px #666666;
+  border: none; }
+
+.contextual-items div a {
+  color: #FFFFFF;
+  font-size: 0.8em;
+  text-decoration: none; }
 
 .widget {
   border: solid #999999 1px;
