@@ -49,8 +49,15 @@ var ProgressWidget = React.createClass({
       <div className="twelve columns widget">
         <WidgetTitle icon="fa fa-tasks" value={this.data.title + ' - ' + pct + '%'} />
 
-      <div className="widget-body">
-
+        <div className="widget-body">
+          <div className="u-full-width u-cf" style={{"marginBottom":"-6px", "fontSize":"1em"}}>
+            <div style={{"float":"left", "width":(24.3) + "%"}}>&nbsp;</div>
+            <div style={{"float":"left"}}><i className="fa fa-arrow-down"></i></div>
+            <div style={{"float":"left", "width":(25) + "%"}}>&nbsp;</div>
+            <div style={{"float":"left"}}><i className="fa fa-arrow-down"></i></div>
+            <div style={{"float":"left", "width":(25) + "%"}}>&nbsp;</div>
+            <div style={{"float":"left"}}><i className="fa fa-arrow-down"></i></div>
+          </div>
           <div className="progress-bar-container">
             <div className="progress-bar-content" style={{"width":pct + "%"}}>&nbsp;</div>
           </div>

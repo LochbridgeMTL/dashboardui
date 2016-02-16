@@ -7,6 +7,8 @@ var LineChartWidget = require('./LineChartWidget.react');
 var PieChartWidget = require('./PieChartWidget.react');
 var ProgressWidget = require('./ProgressWidget.react');
 var TimeSeriesWidget = require('./TimeSeriesWidget.react');
+var NumberAndComplement = require('./NumberAndComplement.react');
+var BulletChartWidget = require('./BulletChartWidget.react');
 
 var Dashboard = React.createClass({
 
@@ -19,13 +21,13 @@ var Dashboard = React.createClass({
           <div className="container">
 
             <div className="row">
-              <ProgressWidget title="Progress" />
+              <BulletChartWidget />
             </div>
 
             <div className="row">
-              <NumberWidget width="five" resource="data/numberdata01.json" />
-              <NumberWidget width="four" resource="data/numberdata02.json" />
-              <NumberWidget width="three" resource="data/numberdata03.json" />
+              <NumberAndComplement width="four" title="Credit sales - Yearly" lefttitle="Year to date" righttitle="Year over year" />
+              <NumberAndComplement width="four" title="Credit sales - Quarterly" lefttitle="This quarter" righttitle="Year over year" />
+              <NumberAndComplement width="four" title="Credit sales - Monthly" lefttitle="This month" righttitle="Year over year" />
             </div>
 
             <div className="row">

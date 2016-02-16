@@ -54,6 +54,7 @@
   padding: 0px;
   background-color: $widget-bg-color;
   margin-bottom: 18px;
+  border-radius: 8px;
 }
 
 .widget-title {
@@ -117,4 +118,9 @@
 .progress-bar-content {
 	background-color: $blue;
 	font-size: 0.5em;
+}
+
+.main-number-label {
+  font-weight: bold;
+  font-size: 1.0em;
 }

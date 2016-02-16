@@ -17,7 +17,6 @@ var TimeSeriesWidget = React.createClass({
         for (var i = 0; i < data.length; i++) {
             data[i] = MG.convert.date(data[i], 'date');
         }
-
         MG.data_graphic({
             data: data,
             full_width: true,
