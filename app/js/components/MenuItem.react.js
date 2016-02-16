@@ -4,21 +4,18 @@ var React = require('react');
 
 var MenuItem = React.createClass({
 
-  getInitialState: function() {
-    return {active: false}
-  },
-
-  toggle: function() {
-    this.setState({active: !(this.state.active)});
+  onClick: function() {
+    this.props.onClick(this.props.page);
   },
 
   render: function() {
 
-    var className = (this.state.active ? "menu-item menu-item-active" : "menu-item");
-    var contextualClass = (this.state.active ? "contextual-items" : "contextual-items-hidden");
+    console.log(this.props.page + " -> " + this.props.active);
+    var className = (this.props.active == true ? "menu-item menu-item-active" : "menu-item");
+    var contextualClass = (this.props.active == true ? "contextual-items" : "contextual-items-hidden");
     return (
       <div>
-        <div className={className} onClick={this.toggle}>
+        <div className={className} onClick={this.onClick}>
           {this.props.label}
         </div>
         <div className={contextualClass}>
