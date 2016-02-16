@@ -4,6 +4,8 @@ var React = require('react');
 var MenuItem = require('./MenuItem.react');
 var MerchantID = require('./MerchantID.react');
 var Summary = require('./Summary.react');
+var CreditSales = require('./CreditSales.react');
+var Insights = require('./Insights.react');
 
 var Application = React.createClass({
 
@@ -31,7 +33,9 @@ var Application = React.createClass({
           <MenuItem label="Customer insight" onClick={this.handleMenuItemClick} page="insight" active={this.state.insight} subsections={this.subsections.insight} />
         </div>
         <div className="u-pull-left" id="main-content">
-          <Summary />
+          <Summary visible={this.state.summary} />
+          <CreditSales visible={this.state.sales} />
+          <Insights visible={this.state.insight} />
         </div>
       </div>
     )

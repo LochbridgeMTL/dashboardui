@@ -11,7 +11,6 @@ body {
   background-color: $white;
   border-bottom: solid $border-color 1px;
   color: $blue;
-	// hor, vert, blur, spread, color
 	box-shadow: 0px 1px 10px 2px $shadow-color;
 }
 
@@ -71,7 +70,7 @@ body {
 }
 
 #nav-logo {
-  height: 120px;
+  height: 100px;
   text-align: center;
   border-bottom: solid $medium-color 1px;
 }
@@ -91,10 +90,9 @@ body {
 
 .contextual-items {
   background-color: $medium-color;
-  box-shadow: 1px 0px 10px 2px $shadow-color;
-  -webkit-box-shadow: inset 0px 2px 14px 0px rgba(102,102,102,1);
-  -moz-box-shadow: inset 0px 2px 14px 0px rgba(102,102,102,1);
-  box-shadow: inset 0px 2px 14px 0px $shadow-color;
+  -webkit-box-shadow: inset 0px 2px 14px 0px #69191a;
+  -moz-box-shadow: inset 0px 2px 14px 0px #69191a;
+  box-shadow: inset 0px 2px 14px 0px #69191a;
   border: none;
 }
 

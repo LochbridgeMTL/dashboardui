@@ -63,7 +63,7 @@ body {
   padding: 18px; }
 
 #nav-logo {
-  height: 120px;
+  height: 100px;
   text-align: center;
   border-bottom: solid #c43235 1px; }
 
@@ -80,10 +80,9 @@ body {
 
 .contextual-items {
   background-color: #c43235;
-  box-shadow: 1px 0px 10px 2px #666666;
-  -webkit-box-shadow: inset 0px 2px 14px 0px #666666;
-  -moz-box-shadow: inset 0px 2px 14px 0px #666666;
-  box-shadow: inset 0px 2px 14px 0px #666666;
+  -webkit-box-shadow: inset 0px 2px 14px 0px #69191a;
+  -moz-box-shadow: inset 0px 2px 14px 0px #69191a;
+  box-shadow: inset 0px 2px 14px 0px #69191a;
   border: none; }
 
 .contextual-items-hidden {
