@@ -3,11 +3,12 @@
 var React = require('react');
 var MenuItem = require('./MenuItem.react');
 var MerchantID = require('./MerchantID.react');
+var Summary = require('./Summary.react');
 
 var Application = React.createClass({
 
   getInitialState: function() {
-    return null;
+    return {currentPage: 'summary'};
   },
 
   render: function() {
@@ -20,7 +21,7 @@ var Application = React.createClass({
           <MenuItem label="Customer insight" />
         </div>
         <div className="u-pull-left" id="main-content">
-          content
+          <Summary />
         </div>
       </div>
     )

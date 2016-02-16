@@ -67,6 +67,7 @@ body {
   position: absolute;
   left: 240px;
   width: 100%;
+  padding: 18px;
 }
 
 #nav-logo {
@@ -108,11 +109,11 @@ body {
 }
 
 .widget {
+  width: 50%;
   border: solid $border-color 1px;
   padding: 0px;
   background-color: $widget-bg-color;
   margin-bottom: 18px;
-  border-radius: 8px;
 }
 
 .widget-title {
@@ -133,6 +134,18 @@ body {
 
 .number-widget .widget-body h3 {
   margin-bottom: 0px;
+}
+
+.number-widget-value {
+  color: $white;
+  border-radius: 50%;
+  width: 100%;
+  height: 47%;
+  padding-top: 38%;
+}
+
+.number-widget-value h3 {
+  font-size: 2.0em;
 }
 
 .number-widget div div span {

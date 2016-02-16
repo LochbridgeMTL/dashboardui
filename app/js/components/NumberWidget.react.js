@@ -10,39 +10,20 @@ var NumberWidget = React.createClass({
     return {value: 0, label:"", title: ""};
   },
 
-  drawNumber: function() {
-
-    var _this = this;
-    $.ajax({
-      url: _this.props.resource,
-      type: 'GET',
-      dataType: 'json',
-    }).complete(function(data) {
-      var parsedData = JSON.parse(data.responseText);
-      _this.setState({value: parsedData.value, label: parsedData.label, title: parsedData.title});
-    });
-
-  },
-
-  componentDidMount: function() {
-    this.drawNumber();
-    var _this = this;
-    setInterval(function(){
-      _this.drawNumber();
-    }, 5000);
-
-  },
-
   render: function() {
 
-    var width = this.props.width + " columns widget number-widget";
-
     return (
-      <div className={width}>
-        <WidgetTitle icon="fa fa-hashtag" value={this.state.title} />
+      <div className="widget number-widget" style={{"width": "400px"}}>
+        <WidgetTitle icon="fa fa-hashtag" value={this.props.title} />
         <div className="widget-body">
-          <h3>{this.state.value}</h3>
-          <div><span>{this.state.label}</span></div>
+
+          <div style={{"width": "150px", "height": "200px"}}>
+            <div className="number-widget-value" style={{"backgroundColor":this.props.bg}}>
+              <h3>{this.props.value}</h3>
+            </div>
+            <div><span>{this.props.label}</span></div>
+          </div>
+
         </div>
       </div>
     )
