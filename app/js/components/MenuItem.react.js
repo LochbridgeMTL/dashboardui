@@ -10,8 +10,8 @@ var MenuItem = React.createClass({
 
   render: function() {
 
-    var className = (this.props.active == true ? "menu-item menu-item-active" : "menu-item");
-    var contextualClass = (this.props.active == true ? "contextual-items" : "contextual-items-hidden");
+    var className = (true == true ? "menu-item menu-item-active" : "menu-item");
+    var contextualClass = (true == true ? "contextual-items" : "contextual-items-hidden");
 
     var subsections = [];
     for(var i in this.props.subsections) {
@@ -21,7 +21,7 @@ var MenuItem = React.createClass({
     return (
       <div>
         <div className={className} onClick={this.onClick}>
-          {this.props.label}
+          <i className={this.props.icon}></i>&nbsp;{this.props.label}
         </div>
         <div className={contextualClass}>
           {subsections}

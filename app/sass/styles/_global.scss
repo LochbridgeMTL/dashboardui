@@ -58,7 +58,7 @@ body {
   position: absolute;
   top: 0px;
   bottom: 0px;
-  background-color: $dark-color;
+  background-color: $black;
   box-shadow: 1px 0px 10px 2px $shadow-color;
 }
 
@@ -90,9 +90,9 @@ body {
 
 .contextual-items {
   background-color: $medium-color;
-  -webkit-box-shadow: inset 0px 2px 14px 0px #69191a;
-  -moz-box-shadow: inset 0px 2px 14px 0px #69191a;
-  box-shadow: inset 0px 2px 14px 0px #69191a;
+  -webkit-box-shadow: inset 0px 2px 14px 0px #666666;
+  -moz-box-shadow: inset 0px 2px 14px 0px #666666;
+  box-shadow: inset 0px 2px 14px 0px #666666;
   border: none;
 }
 
@@ -100,10 +100,18 @@ body {
   display: none;
 }
 
+.contextual-items div {
+  border-bottom: solid $medium-color 1px;
+}
+
 .contextual-items div a {
   color: $white;
   font-size: 0.8em;
   text-decoration: none;
+}
+
+.contextual-items div:hover {
+  border-bottom: solid $white 1px;
 }
 
 .widget {
@@ -115,10 +123,12 @@ body {
 }
 
 .widget-title {
+  background-color: $accent;
   border-bottom: solid $border-color 1px;
-  padding: 6px;
-  margin-left: 6px;
-  margin-right: 6px;
+  padding: 12px;
+  margin-left: 0px;
+  margin-right: 0px;
+  color: $white;
 }
 
 .widget-body {
@@ -192,4 +202,114 @@ body {
 .main-number-label {
   font-weight: bold;
   font-size: 1.0em;
+}
+
+.breakdown-widget {
+  padding: 0px;
+  text-align: center;
+}
+
+.breakdown-widget-top {
+  background-color: $white;
+  color: #62bcfa;
+  font-weight: bold;
+  padding: 8px;
+}
+
+.breakdown-widget-middle {
+  padding: 24px;
+  background-color: #62bcfa;
+  color: $white;
+  font-weight: bold;
+}
+
+.breakdown-widget-middle h3 {
+  font-weight: normal;
+  font-size: 3.0em;
+  margin-bottom: 0px;
+}
+
+.breakdown-widget-middle ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-align: left;
+  margin-left: 33%;
+}
+
+.breakdown-widget-middle ul li {
+  margin: 0px;
+  padding: 0px;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+.breakdown-widget-bottom {
+  background-color: $white;
+  color: #999999;
+  font-weight: normal;
+  padding: 8px;
+}
+
+.resultGroup {
+  margin-right: 36px;
+  margin-top: 6px;
+}
+
+.resultGroup .result {
+  font-size: 1.5em;
+  color: $blue;
+}
+
+.resultGroup .measure {
+  font-weight: bold;
+}
+
+.resultGroup .difference-positive {
+  color: #33AA33;
+  font-size: 1.25em;
+}
+
+.resultGroup .difference-negative {
+  font-size: 1.25em;
+  color: #AA3333;
+}
+
+.notes {
+  border: solid #DEDEDE 1px;
+  margin-top: 12px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 14px 0px #AAAAAA;
+  padding-bottom: 8px;
+}
+
+.notes p {
+  font-size: 0.5em;
+  font-family: sans-serif;
+  padding: 8px;
+  margin: 0px;
+  text-align: left;
+}
+
+.notes ul, .notes ul li {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  margin-left: 4px;
+}
+
+.notes ul li {
+  font-size: 0.8em;
+}
+
+.color-blue {
+  color: $blue;
+}
+
+.color-green {
+  color: #33AA33;
+}
+
+.color-red {
+  color: #AA3333;
 }

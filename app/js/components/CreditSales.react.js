@@ -1,6 +1,7 @@
 'use strict'
 
 var React = require('react');
+var BarChart = require('./BarChart.react');
 
 var CreditSales = React.createClass({
 

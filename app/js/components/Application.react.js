@@ -28,9 +28,9 @@ var Application = React.createClass({
       <div>
         <div id="menu-container" className="u-pull-left">
           <MerchantID />
-          <MenuItem label="Summary" onClick={this.handleMenuItemClick} page="summary" active={this.state.summary} subsections={this.subsections.summary} />
-          <MenuItem label="Credit sales" onClick={this.handleMenuItemClick} page="sales" active={this.state.sales} subsections={this.subsections.sales} />
-          <MenuItem label="Customer insight" onClick={this.handleMenuItemClick} page="insight" active={this.state.insight} subsections={this.subsections.insight} />
+          <MenuItem icon="fa fa-calculator" label="Summary" onClick={this.handleMenuItemClick} page="summary" active={this.state.summary} subsections={this.subsections.summary} />
+          <MenuItem icon="fa fa-credit-card-alt" label="Credit sales" onClick={this.handleMenuItemClick} page="sales" active={this.state.sales} subsections={this.subsections.sales} />
+          <MenuItem icon="fa fa-eye" label="Customer insight" onClick={this.handleMenuItemClick} page="insight" active={this.state.insight} subsections={this.subsections.insight} />
         </div>
         <div className="u-pull-left" id="main-content">
           <Summary visible={this.state.summary} />
