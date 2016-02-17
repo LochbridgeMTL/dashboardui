@@ -6,7 +6,7 @@ var WidgetTitle = React.createClass({
 
   render: function() {
     return (
-      <div className="widget-title">
+      <div className="widget-title" style={{"backgroundColor":this.props.bg}}>
         <div style={{"float":"right"}}>
           <a href="#" style={{"color":"#FFFFFF"}}><i className="fa fa-cog"></i></a>
         </div>
